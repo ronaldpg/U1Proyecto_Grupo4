@@ -1,3 +1,7 @@
+// COMPONENTE: Header de navegación para la pagina runaway
+
+// Se necesita esto para el header crearHeader(containerId, titulo, arrayMenuItems)
+
 function crearHeader(containerId, titulo, menuItems) {
     const container = document.getElementById(containerId);
     
@@ -44,6 +48,16 @@ function crearHeader(containerId, titulo, menuItems) {
             .header-nav-menu a:hover {
                 background: rgba(255,255,255,0.2);
             }
+            
+            .header-descripcion {
+                background: #ffebee;
+                padding: 10px 15px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                color: #666;
+                font-size: 14px;
+                border-left: 4px solid #d32f2f;
+            }
         </style>
     `;
     
@@ -61,6 +75,10 @@ function crearHeader(containerId, titulo, menuItems) {
                 </ul>
             </div>
         </header>
+        <div class="header-descripcion">
+            <strong><i class="fas fa-thumbtack"></i> Componente Header:</strong> Barra de navegación principal con logo y menú. 
+            Se usa llamando crearHeader(id, titulo, [{texto, url}])
+        </div>
     `;
     
     container.innerHTML = headerHTML;

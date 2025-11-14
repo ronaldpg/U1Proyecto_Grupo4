@@ -1,3 +1,6 @@
+// COMPONENTE: Cards de rutas para la pagina runaway
+
+// Se necesita esto para el componente crearCards(containerId)
 function crearCards(containerId) {
     const container = document.getElementById(containerId);
     
@@ -114,21 +117,21 @@ function crearCards(containerId) {
     
     const cardsHTML = rutasData.map(ruta => `
         <div class="card-ruta-item" style="border-top-color: ${ruta.color}">
-            <div class="card-ruta-header" style="background: ${ruta.color}">
-                <div class="card-ruta-numero">${ruta.numero}</div>
-                <div class="card-ruta-nombre">${ruta.nombre}</div>
-            </div>
-            <div class="card-ruta-body">
-                <div class="card-ruta-desc">${ruta.descripcion}</div>
-                <div class="card-ruta-info">
-                    <span class="card-frecuencia">⏱️ ${ruta.frecuencia}</span>
-                    <span class="card-estado ${ruta.estado === 'Operativo' ? 'estado-operativo' : 'estado-mantenimiento'}">
-                        ${ruta.estado}
-                    </span>
-                </div>
-            </div>
+        <div class="card-ruta-header" style="background: ${ruta.color}">
+        <div class="card-ruta-numero">${ruta.numero}</div>
+        <div class="card-ruta-nombre">${ruta.nombre}</div>
         </div>
-    `).join('');
+        <div class="card-ruta-body">
+        <div class="card-ruta-desc">${ruta.descripcion}</div>
+        <div class="card-ruta-info">
+        <span class="card-frecuencia"><i class="far fa-clock"></i> ${ruta.frecuencia}</span>
+        <span class="card-estado ${ruta.estado === 'Operativo' ? 'estado-operativo' : 'estado-mantenimiento'}">
+        ${ruta.estado}
+        </span>
+        </div>
+        </div>
+        </div>
+        `).join('');
     
     container.innerHTML = `
         ${styles}

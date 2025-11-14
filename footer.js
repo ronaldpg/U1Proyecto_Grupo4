@@ -1,3 +1,6 @@
+// COMPONENTE: Footer para la pagina runaway
+
+// Se necesita esto para el footer crearFooter(containerId)
 function crearFooter(containerId) {
     const container = document.getElementById(containerId);
     
@@ -102,9 +105,9 @@ function crearFooter(containerId) {
                             Viaja seguro, llega a tiempo.
                         </p>
                         <div class="footer-social">
-                            <a href="#" class="footer-social-btn">f</a>
-                            <a href="#" class="footer-social-btn">t</a>
-                            <a href="#" class="footer-social-btn">i</a>
+                            <a href="#" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="footer-social-btn"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     
@@ -131,19 +134,23 @@ function crearFooter(containerId) {
                     <div class="footer-column">
                         <h3>Contacto</h3>
                         <ul>
-                            <li>📧 info@runaway.com</li>
-                            <li>📱 +593 2 123 4567</li>
-                            <li>📍 Quito, Ecuador</li>
-                            <li>🕐 Lun - Vie: 6:00 - 22:00</li>
+                            <li><i class="fas fa-envelope"></i> info@runaway.com</li>
+                            <li><i class="fas fa-phone"></i> +593 2 123 4567</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</li>
+                            <li><i class="far fa-clock"></i> Lun - Vie: 6:00 - 22:00</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="footer-bottom">
+                <strong>Componente Footer:</strong> Pie de página con información de contacto, servicios y redes sociales. 
+                Se usa llamando crearFooter(containerId)
                     <p>&copy; 2025 RUNAWAY - Todos los derechos reservados | Desarrollado para Programación Integrativa de Componentes</p>
                 </div>
             </div>
         </footer>
+        <div class="footer-descripcion">
+        </div>
     `;
     
     container.innerHTML = footerHTML;

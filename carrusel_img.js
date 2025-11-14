@@ -1,3 +1,6 @@
+// COMPONENTE: Carrusel de imágenes de mapas de rutas para la pagina runaway
+
+// Se necesita esto para el componente crearCarrusel(containerId)
 function crearCarrusel(containerId) {
     const container = document.getElementById(containerId);
     
@@ -98,8 +101,8 @@ function crearCarrusel(containerId) {
         <div class="carrusel-mapa-wrapper">
             <div class="carrusel-info-overlay">Ruta: Línea Principal</div>
             <img id="carruselMapaImg" class="carrusel-mapa-img" src="${mapasRutas[0]}" alt="Mapa de ruta">
-            <button class="carrusel-control-btn carrusel-prev" onclick="changeSlide(-1)">❮</button>
-            <button class="carrusel-control-btn carrusel-next" onclick="changeSlide(1)">❯</button>
+            <button class="carrusel-control-btn carrusel-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carrusel-control-btn carrusel-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
             <div class="carrusel-dots-container" id="carruselDots"></div>
         </div>
     `;

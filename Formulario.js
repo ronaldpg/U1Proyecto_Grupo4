@@ -1,3 +1,7 @@
+// COMPONENTE: Formulario de registro de viajes para la pagina runaway
+
+// Se necesita esto para el componente crearFormulario(containerId)
+
 function crearFormulario(containerId) {
     const container = document.getElementById(containerId);
     
@@ -132,7 +136,7 @@ function crearFormulario(containerId) {
                 </div>
                 
                 <button type="submit" class="form-viaje-btn-submit">
-                    🚌 Registrar Viaje
+                    <i class="fas fa-bus"></i> Registrar Viaje
                 </button>
             </form>
             
@@ -157,7 +161,7 @@ function submitViajeForm(event) {
     const resultado = document.getElementById('viajeResultado');
     resultado.style.display = 'block';
     resultado.innerHTML = `
-        <div class="form-resultado-titulo">✅ Viaje Registrado Exitosamente</div>
+        <div class="form-resultado-titulo"><i class="fas fa-check-circle"></i> Viaje Registrado Exitosamente</div>
         <p><strong>Ruta:</strong> ${datosViaje.numeroRuta}</p>
         <p><strong>Bus:</strong> ${datosViaje.numeroBus}</p>
         <p><strong>Origen:</strong> ${datosViaje.paradaOrigen}</p>

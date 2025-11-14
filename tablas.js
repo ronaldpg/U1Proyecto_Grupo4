@@ -1,3 +1,6 @@
+// COMPONENTE: Tabla de horarios de viajes para la pagina runaway
+
+// Se necesita esto para el componente crearTabla(containerId)
 function crearTabla(containerId) {
     const container = document.getElementById(containerId);
     

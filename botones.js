@@ -1,3 +1,7 @@
+// COMPONENTE: Botones de acción para la pagina runaway
+
+// Se necesita esto para el componente crearBotones(containerId)
+
 function crearBotones(containerId) {
     const container = document.getElementById(containerId);
     
@@ -55,16 +59,16 @@ function crearBotones(containerId) {
         ${styles}
         <div class="botones-grid">
             <button class="btn-runaway btn-rojo" onclick="accionBoton('Buscar Ruta')">
-                🚌 Buscar Ruta
+                <i class="fas fa-bus"></i> Buscar Ruta
             </button>
             <button class="btn-runaway btn-rosa" onclick="accionBoton('Ver Paradas')">
-                📍 Ver Paradas
+                <i class="fas fa-map-marker-alt"></i> Ver Paradas
             </button>
             <button class="btn-runaway btn-verde" onclick="accionBoton('Iniciar Viaje')">
-                ▶️ Iniciar Viaje
+                <i class="fas fa-play"></i> Iniciar Viaje
             </button>
             <button class="btn-runaway btn-gris" onclick="accionBoton('Configuración')">
-                ⚙️ Configuración
+                <i class="fas fa-cog"></i> Configuración
             </button>
         </div>
     `;

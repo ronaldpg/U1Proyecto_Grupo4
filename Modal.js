@@ -1,3 +1,6 @@
+// COMPONENTE: Modal de detalles del viaje para la pagina runaway
+
+// Se necesita esto para el componente crearModal(containerId)
 function crearModal(containerId) {
     const container = document.getElementById(containerId);
     
@@ -158,14 +161,14 @@ function crearModal(containerId) {
     const modalHTML = `
         ${styles}
         <button class="modal-trigger-runaway" onclick="openModalRunaway()">
-            🚌 Ver Detalles del Viaje
+            <i class="fas fa-bus"></i> Ver Detalles del Viaje
         </button>
         
         <div id="modalOverlayRunaway" class="modal-overlay-runaway" onclick="closeModalRunaway()">
             <div class="modal-content-runaway" onclick="event.stopPropagation()">
                 <div class="modal-header-runaway">
                     <div class="modal-title-runaway">Información del Viaje</div>
-                    <button class="modal-close-x" onclick="closeModalRunaway()">×</button>
+                    <button class="modal-close-x" onclick="closeModalRunaway()"><i class="fas fa-times"></i></button>
                 </div>
                 
                 <div class="modal-body-runaway">
@@ -191,7 +194,7 @@ function crearModal(containerId) {
                     
                     <div class="modal-info-item">
                         <div class="modal-info-label">Estado del Viaje</div>
-                        <div>🟢 En ruta - Sin retrasos</div>
+                        <div><i class="fas fa-circle" style="color: #4caf50;"></i> En ruta - Sin retrasos</div>
                     </div>
                 </div>
                 

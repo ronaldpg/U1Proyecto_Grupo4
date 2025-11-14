@@ -1,3 +1,7 @@
+// COMPONENTE: Notificaciones de alertas para la pagina runaway
+
+// Se necesita esto para el componente crearNotificaciones(containerId)
+
 function crearNotificaciones(containerId) {
     const container = document.getElementById(containerId);
     
@@ -151,16 +155,16 @@ function crearNotificaciones(containerId) {
         ${styles}
         <div class="notif-controles">
             <button class="notif-btn notif-btn-info" onclick="mostrarNotificacion('info')">
-                📍 Alerta de Ruta
+                <i class="fas fa-info-circle"></i> Alerta de Ruta
             </button>
             <button class="notif-btn notif-btn-success" onclick="mostrarNotificacion('success')">
-                ✅ Bus Llegando
+                <i class="fas fa-check-circle"></i> Bus Llegando
             </button>
             <button class="notif-btn notif-btn-warning" onclick="mostrarNotificacion('warning')">
-                ⚠️ Retraso
+                <i class="fas fa-exclamation-triangle"></i> Retraso
             </button>
             <button class="notif-btn notif-btn-error" onclick="mostrarNotificacion('error')">
-                🚫 Ruta Suspendida
+                <i class="fas fa-ban"></i> Ruta Suspendida
             </button>
         </div>
         
@@ -206,7 +210,7 @@ function mostrarNotificacion(tipo) {
     notifElement.innerHTML = `
         <div class="notif-header-box">
             <div class="notif-titulo">${notif.titulo}</div>
-            <button class="notif-close-btn" onclick="cerrarNotificacion('${notifId}')">×</button>
+            <button class="notif-close-btn" onclick="cerrarNotificacion('${notifId}')"><i class="fas fa-times"></i></button>
         </div>
         <div class="notif-mensaje">${notif.mensaje}</div>
         <div class="notif-progress-bar"></div>
