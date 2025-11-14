@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Runaway - Sistema de Transporte Publico</title>
+    <title>Runaway - Sistema de Transporte Público</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -42,56 +42,57 @@
     </style>
 </head>
 <body>
-    <!-- EJEMPLO DE USO DEL COMPONENTE: crearHeader('headerContainer', 'RUNAWAY', [{texto: 'Inicio', url: '#'}]) -->
-    <div id="headerContainer"></div>
+    <!-- CUSTOM ELEMENT: Header -->
+    <runaway-header titulo="RUNAWAY"></runaway-header>
     
     <div class="main-container">
         <div class="section-content">
-            <h2 class="section-titulo">Panel de Control <strong>Componente Botones:</strong> Botones de accion para la pagina runaway. 
-            Se usa llamando crearBotones(containerId)</h2>
-            <div id="botonesContainer"></div>
+            <h2 class="section-titulo">Panel de Control - Componente Botones <strong>Componente Botones aqui se utiliza el Custom ELEMENT de &lt;runaway-botones&gt;</strong></h2>
+            <!-- CUSTOM ELEMENT: Botones -->
+            <runaway-botones></runaway-botones>
         </div>
         
         <div class="section-content">
-            <h2 class="section-titulo">Mapa de Rutas en Tiempo Real</h2>
-            <div id="carruselContainer"></div>
+            <h2 class="section-titulo">Mapa de Rutas en Tiempo Real <strong>Componente Carrusel aqui se utiliza el Custom ELEMENT de &lt;runaway-carrusel&gt;</strong></h2>
+            <!-- CUSTOM ELEMENT: Carrusel -->
+            <runaway-carrusel></runaway-carrusel>
         </div>
         
         <div class="section-content">
-            <h2 class="section-titulo">Informacion de Rutas <strong>Componente Cards:</strong> Tarjetas informativas de rutas para la pagina runaway. 
-        Se usa llamando crearCards(containerId)</h2>
-            <div id="cardsContainer"></div>
+            <h2 class="section-titulo">Información de Rutas - Componente Cards <strong>Componente Cards aqui se utiliza el Custom ELEMENT de &lt;runaway-cards&gt;</strong></h2>
+            <!-- CUSTOM ELEMENT: Cards -->
+            <runaway-cards></runaway-cards>
         </div>
         
         <div class="section-content">
-            <h2 class="section-titulo">Registrar Nuevo Viaje <strong>Componente Formulario:</strong> Formulario para registrar nuevos viajes en la pagina runaway. 
-        Se usa llamando crearFormulario(containerId)</h2>
-            <div id="formularioContainer"></div>
+            <h2 class="section-titulo">Registrar Nuevo Viaje - Componente Formulario <strong>Componente Formulario aqui se utiliza el Custom ELEMENT de &lt;runaway-formulario&gt;</strong></h2>
+            <!-- CUSTOM ELEMENT: Formulario -->
+            <runaway-formulario></runaway-formulario>
         </div>
         
         <div class="section-content">
-            <h2 class="section-titulo">Horarios de Buses <strong>Componente Tabla:</strong> Tabla para mostrar horarios de buses en la pagina runaway. 
-        Se usa llamando crearTabla(containerId)</h2>
-            <div id="tablaContainer"></div>
+            <h2 class="section-titulo">Horarios de Buses - Componente Tabla <strong>Componente Tabla aqui se utiliza el Custom ELEMENT de &lt;runaway-tabla&gt;</strong></h2>
+            <!-- CUSTOM ELEMENT: Tabla -->
+            <runaway-tabla></runaway-tabla>
         </div>
         
         <div class="section-content">
-            <h2 class="section-titulo">Detalles del Viaje <strong>Componente Modal:</strong> Modal para mostrar detalles del viaje en la pagina runaway. 
-        Se usa llamando crearModal(containerId)</h2>
-            <div id="modalContainer"></div>
+            <h2 class="section-titulo">Detalles del Viaje - Componente Modal <strong>Componente Modal aqui se utiliza el Custom ELEMENT de &lt;runaway-modal&gt;</strong></h2>
+            <!-- CUSTOM ELEMENT: Modal -->
+            <runaway-modal></runaway-modal>
         </div>
         
         <div class="section-content">
-            <h2 class="section-titulo">Alertas del Sistema <strong>Componente Notificaciones:</strong> Sistema de alertas para la pagina runaway. 
-        Se usa llamando crearNotificaciones(containerId)</h2>
-            <div id="notificacionesContainer"></div>
+            <h2 class="section-titulo">Alertas del Sistema - Componente Notificaciones <strong>Componente Notificaciones aqui se utiliza el Custom ELEMENT de &lt;runaway-notificaciones&gt;</strong></h2>
+            <!-- CUSTOM ELEMENT: Notificaciones -->
+            <runaway-notificaciones></runaway-notificaciones>
         </div>
     </div>
     
-    <!-- EJEMPLO DE USO DEL COMPONENTE: crearFooter('footerContainer') -->
-    <div id="footerContainer"></div>
+    <!-- CUSTOM ELEMENT: Footer -->
+    <runaway-footer></runaway-footer>
     
-    <!-- Scripts de componentes -->
+    <!-- Scripts de componentes - Ahora todos son Custom Elements -->
     <script src="header.js"></script>
     <script src="botones.js"></script>
     <script src="carrusel_img.js"></script>
@@ -101,7 +102,5 @@
     <script src="Modal.js"></script>
     <script src="Notificaciones.js"></script>
     <script src="footer.js"></script>
-    
-    <!-- Inicializacion de componentes -->
-    <script>
-        // Esp
+</body>
+</html>
