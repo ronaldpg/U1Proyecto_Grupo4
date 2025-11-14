@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runaway - Sistema de Transporte Público</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+        }
+        
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-content {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .section-titulo {
+            color: #d32f2f;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 3px solid #d32f2f;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="headerContainer"></div>
+    
+    <div class="main-container">
+        <div class="section-content">
+            <h2 class="section-titulo">Panel de Control</h2>
+            <div id="botonesContainer"></div>
+        </div>
+        
+        <div class="section-content">
+            <h2 class="section-titulo">Mapa de Rutas en Tiempo Real</h2>
+            <div id="carruselContainer"></div>
+        </div>
+        
+        <div class="section-content">
+            <h2 class="section-titulo">Información de Rutas</h2>
+            <div id="cardsContainer"></div>
+        </div>
+        
+        <div class="section-content">
+            <h2 class="section-titulo">Registrar Nuevo Viaje</h2>
+            <div id="formularioContainer"></div>
+        </div>
+        
+        <div class="section-content">
+            <h2 class="section-titulo">Horarios de Buses</h2>
+            <div id="tablaContainer"></div>
+        </div>
+        
+        <div class="section-content">
+            <h2 class="section-titulo">Detalles del Viaje</h2>
+            <div id="modalContainer"></div>
+        </div>
+        
+        <div class="section-content">
+            <h2 class="section-titulo">Alertas del Sistema</h2>
+            <div id="notificacionesContainer"></div>
+        </div>
+    </div>
+    
+    <div id="footerContainer"></div>
+    
+    <!-- Scripts de componentes -->
+    <script src="header.js"></script>
+    <script src="botones.js"></script>
+    <script src="carrusel_img.js"></script>
+    <script src="cards.js"></script>
+    <script src="Formulario.js"></script>
+    <script src="tablas.js"></script>
+    <script src="Modal.js"></script>
+    <script src="Notificaciones.js"></script>
+    <script src="footer.js"></script>
+    
+    <!-- Inicialización de componentes -->
+    <script>
+        // Esperar a que todo cargue
+        window.addEventListener('DOMContentLoaded', function() {
+            // Verificar que las funciones existan antes de llamarlas
+            if (typeof crearHeader === 'function') {
+                crearHeader('headerContainer', 'RUNAWAY', [
+                    { texto: 'Inicio', url: '#' },
+                    { texto: 'Rutas', url: '#rutas' },
+                    { texto: 'Viajes', url: '#viajes' },
+                    { texto: 'Paradas', url: '#paradas' }
+                ]);
+            }
+            
+            if (typeof crearBotones === 'function') {
+                crearBotones('botonesContainer');
+            }
+            
+            if (typeof crearCarrusel === 'function') {
+                crearCarrusel('carruselContainer');
+            }
+            
+            if (typeof crearCards === 'function') {
+                crearCards('cardsContainer');
+            }
+            
+            if (typeof crearFormulario === 'function') {
+                crearFormulario('formularioContainer');
+            }
+            
+            if (typeof crearTabla === 'function') {
+                crearTabla('tablaContainer');
+            }
+            
+            if (typeof crearModal === 'function') {
+                crearModal('modalContainer');
+            }
+            
+            if (typeof crearNotificaciones === 'function') {
+                crearNotificaciones('notificacionesContainer');
+            }
+            
+            if (typeof crearFooter === 'function') {
+                crearFooter('footerContainer');
+            }
+        });
+    </script>
+</body>
+</html>
